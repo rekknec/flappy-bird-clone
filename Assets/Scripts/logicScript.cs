@@ -12,9 +12,34 @@ public class logicScript : MonoBehaviour
     public GameObject gameOverScreen;
     public AudioSource src;
     public AudioClip deathSFX, dingSFX;
-    
-   
+    //private birdScript bird;
 
+
+    /* public static logicScript Instance { get; private set; }
+
+     This is a singleton class
+    private void Awake()
+    {
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+    }
+    */
+
+    /*
+     public void startGame()
+    {
+        
+        SceneManager.LoadScene(1);
+        
+    }
+    */
     [ContextMenu("Increase score")]
     public void addScore(int scoreToAdd)
     {
@@ -27,7 +52,7 @@ public class logicScript : MonoBehaviour
     }
     public void restartGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        SceneManager.LoadScene(1);
     }
 
     public void gameOver()
@@ -44,4 +69,6 @@ public class logicScript : MonoBehaviour
             src.Play();
         }
     }
+
+    
 }
